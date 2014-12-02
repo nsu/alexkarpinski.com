@@ -8,8 +8,7 @@ module.exports = function(environment) {
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
-        // Here you can enable experimental features on an ember canary build
-        // e.g. 'with-controller': true
+        'ember-htmlbars': true
       }
     },
 
@@ -42,6 +41,23 @@ module.exports = function(environment) {
   if (environment === 'production') {
 
   }
+
+  ENV.contentSecurityPolicy =  {
+    'default-src': "'none'",
+    'script-src': "'self' "            +
+                  "'unsafe-eval' "     +
+                  "'unsafe-inline' "   +
+                  "http://www.google-analytics.com " +
+                  "http://maxcdn.bootstrapcdn.com",
+    'font-src': "'self' " +
+                "http://maxcdn.bootstrapcdn.com",
+    'connect-src': "'self'",
+    'img-src': "'self' " +
+              "http://www.google-analytics.com",
+    'style-src': "'self' " +
+                 "http://maxcdn.bootstrapcdn.com",
+    'media-src': "'self'"
+  };
 
   return ENV;
 };

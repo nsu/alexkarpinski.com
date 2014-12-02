@@ -1,31 +1,5 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, hr, button {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align: baseline; background:none;}
-
-@font-face {
-	font-family: 'Museo';
-	src: url(type/Museo300-Regular.otf);
-}
-
-@font-face {
-    font-family: 'Museo';
-    src: url(type/Museo100-Regular.otf);
-    font-weight: 100;
-}
-
-@font-face {
-    font-family: 'Museo';
-    src: url(type/Museo600-Regular.otf);
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: 'Gotham Rounded';
-    src: url(type/GothamRnd.otf);
-}
-
-@font-face {
-    font-family: 'Futura LT';
-    src: url(type/FuturaLT.otf);
-}
+@import 'app/styles/type';
+@import 'app/styles/variables';
 
 body {
     padding: 0;
@@ -33,7 +7,8 @@ body {
     min-width: 1024px;
     color: black;
     background-color: #F9FBF4;
-    font: 12px "Museo", Verdana, serif;
+    font-size: 12px;
+    font-family: $copy-type;
 }
 
 #wrapper {
@@ -76,7 +51,54 @@ h1, h2, h3, h4, h5, h6, li {
     margin-right: 9px;
     color: #000;
     text-align: center;
-    font:17px/40px "Museo", Verdana, serif;
+    font-size: 17px;
+    line-height: 40px;
+    font-family: $copy-type;
+}
+
+#wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+img{border-style:none;}
+a{
+    text-decoration:none;
+    color:#fff;
+}
+a:focus {outline:none;}
+a:hover{text-decoration:underline;}
+h1, h2, h3, h4, h5, h6, li {
+    line-height: 100%;
+}
+
+#header {
+    background: url(/images/bg-header.gif) repeat-x;
+}
+
+.header-holder{
+    width:946px;
+    margin:0 auto;
+}
+
+.container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.start-link {
+    background: url(/images/btn-start.gif) no-repeat;
+    width: 159px;
+    padding-right: 5px;
+    height: 42px;
+    float: right;
+    margin-right: 9px;
+    color: #000;
+    text-align: center;
+    font-size: 17px;
+    line-height: 40px;
+    font-family: $copy-type;
 }
 
 .logo{
@@ -102,7 +124,53 @@ ol, ul {
 #nav li{
     float: left;
     padding: 0 25px 0 3px;
-    font: 15px/20px "Museo", Verdana, serif;
+    font: 15px;
+    line-height: 20px;
+    font-family: $copy-type;
+}
+
+#wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+img{border-style:none;}
+a{
+    text-decoration:none;
+    color:#fff;
+}
+a:focus {outline:none;}
+a:hover{text-decoration:underline;}
+h1, h2, h3, h4, h5, h6, li {
+    line-height: 100%;
+}
+
+#header {
+    background: url(/images/bg-header.gif) repeat-x;
+}
+
+.header-holder{
+    width:946px;
+    margin:0 auto;
+}
+
+.container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.start-link {
+    background: url(/images/btn-start.gif) no-repeat;
+    width: 159px;
+    padding-right: 5px;
+    height: 42px;
+    float: right;
+    margin-right: 9px;
+    color: #000;
+    text-align: center;
+    font:17px;
+    line-height: 40px;
 }
 
 #nav li a {
@@ -158,7 +226,9 @@ ol, ul {
 }
 
 .promo-box .info h2 {
-    font: 41px/48px "Museo", Verdana, serif;
+    font: 41px;
+    line-height: 48px;
+    font-family: $copy-type;
     font-weight: 100;
     letter-spacing: 0;
     margin: 0 0 12px;
@@ -166,7 +236,7 @@ ol, ul {
 }
 
 .promo-box .info p {
-    font-family: "Museo", Verdana, serif;
+    font-family: $copy-type;
     font-weight: 100;
     font-size: 25px;
     letter-spacing: 0;
@@ -245,7 +315,9 @@ ol, ul {
 .sub-nav li{
     float:left;
     padding:0 25px 0 3px;
-    font:15px/20px "Museo", Verdana, serif;
+    font:15px;
+    line-height: 20px;
+    font-family: $copy-type;
 }
 .sub-nav li a{
     color:#fff;
@@ -349,7 +421,7 @@ a .contentbox {
 }
 
 #contact-dialog p {
-    font-family: "Museo", Verdana, serif;
+    font-family: $copy-type;
     text-align: center;
     font-size: 23px;
     padding-top: 18px;

@@ -1,0 +1,8 @@
+<ul id="nav">
+{{#each page in pages}}
+<li class="{{page.active}}">
+  <a href="{{page.href}}">Blog</a>
+</li> 
+{{/each}}
+</ul> 
+{{yield}}

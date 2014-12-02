@@ -55,7 +55,8 @@ module.exports = function(environment) {
     'img-src': "'self' " +
               "http://www.google-analytics.com",
     'style-src': "'self' " +
-                 "http://maxcdn.bootstrapcdn.com",
+                 "http://maxcdn.bootstrapcdn.com " +
+                 "http://yui.yahooapis.com/",
     'media-src': "'self'"
   };
 

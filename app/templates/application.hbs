@@ -1,22 +1,20 @@
-<div id="container">
+<div class="container">
+
 <div id="header">
-  <div class="header-holder">
-    <div class="row">
-      <a href="https://github.com/nsu" class="start-link">Visit Gitub</a>
-    </div> <!-- container -->
-    <a href="#"><h1 class="logo">Alex Karpinski</h1></a><!-- logo -->
-    {{ nav-list my_path=currentPath }}
-    <ul id="nav">
-      <li class="active"><a href="/">Home</a></li>
-      <li><a href="http://blog.alexkarpinski.com">Blog</a></li>
-      <li><a href="lasso.html">Lasso</a></li>
-      <li><a href="devops.html">DevOps</a></li>
-      <li><a href="design.html">Web Design</a></li>
-      <li><a href="sideprojects.html">Side Projects</a></li>
-      <li><a href="education.html">Education</a></li>
-    </ul> <!-- nav -->
-  </div> <!-- header-holder -->
-</div> <!-- header -->
+  <div class="row">
+    <div id="github-link-holder" class="row">
+      <div class="col-md-offset-8 col-md-2">
+          <a href="https://github.com/nsu" class="github-link">
+            <div id="github-link-lines" class="h-bar-top h-bar-bottom">Visit Github</div> 
+          </a>
+      </div> <!-- github-link-holder-->
+
+    </div> 
+      <div class="row">
+        <div class="col-md-offset-2"><a href="#"><h1 id="logo">Alex Karpinski</h1></a></div><!-- logo -->
+      </div> 
+  </div> 
+</div> 
 
 <div class="promo-box">
   <div class="holder">
@@ -52,6 +50,6 @@
     </div><!--contact-->
   </div><!--holder-->
 </div> <!--footer-->
-</div> <!-- container -->
+</div> <!--container-->
 
 {{outlet}}

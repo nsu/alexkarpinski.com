@@ -1,3 +1,5 @@
+@import 'bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
+@import 'app/styles/unpad';
 @import 'app/styles/type';
 @import 'app/styles/variables';
 
@@ -11,97 +13,7 @@ body {
     font-family: $copy-type;
 }
 
-#wrapper {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-img{border-style:none;}
-a{
-    text-decoration:none;
-    color:#fff;
-}
-a:focus {outline:none;}
-a:hover{text-decoration:underline;}
-h1, h2, h3, h4, h5, h6, li {
-    line-height: 100%;
-}
-
-#header {
-    background: url(/images/bg-header.gif) repeat-x;
-}
-
-.header-holder{
-    width:946px;
-    margin:0 auto;
-}
-
-.container {
-    overflow: hidden;
-    width: 100%;
-}
-
-.start-link {
-    background: url(/images/btn-start.gif) no-repeat;
-    width: 159px;
-    padding-right: 5px;
-    height: 42px;
-    float: right;
-    margin-right: 9px;
-    color: #000;
-    text-align: center;
-    font-size: 17px;
-    line-height: 40px;
-    font-family: $copy-type;
-}
-
-#wrapper {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-img{border-style:none;}
-a{
-    text-decoration:none;
-    color:#fff;
-}
-a:focus {outline:none;}
-a:hover{text-decoration:underline;}
-h1, h2, h3, h4, h5, h6, li {
-    line-height: 100%;
-}
-
-#header {
-    background: url(/images/bg-header.gif) repeat-x;
-}
-
-.header-holder{
-    width:946px;
-    margin:0 auto;
-}
-
-.container {
-    overflow: hidden;
-    width: 100%;
-}
-
-.start-link {
-    background: url(/images/btn-start.gif) no-repeat;
-    width: 159px;
-    padding-right: 5px;
-    height: 42px;
-    float: right;
-    margin-right: 9px;
-    color: #000;
-    text-align: center;
-    font-size: 17px;
-    line-height: 40px;
-    font-family: $copy-type;
-}
-
-.logo{
+#logo{
     margin:28px 0 51px;
     text-indent:-9999px;
     background:url(/images/Logo1.png) no-repeat;
@@ -150,27 +62,32 @@ h1, h2, h3, h4, h5, h6, li {
     background: url(/images/bg-header.gif) repeat-x;
 }
 
-.header-holder{
-    width:946px;
-    margin:0 auto;
-}
-
-.container {
-    overflow: hidden;
+.github-link {
+    // background: url(/images/btn-start.gif) no-repeat;
+    background-color: #CDF7EB;
+    border: 1px white  solid;
+    border-top: none;
+    height: 40px;
     width: 100%;
-}
-
-.start-link {
-    background: url(/images/btn-start.gif) no-repeat;
-    width: 159px;
-    padding-right: 5px;
-    height: 42px;
-    float: right;
-    margin-right: 9px;
+    float: right; 
     color: #000;
     text-align: center;
     font-size: 17px;
-    line-height: 40px;
+    letter-spacing:2px;
+}
+
+#github-link-lines {
+    text-align: center;
+    width:85%;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+.h-bar-top {
+    border-top: $dark-line;
+}
+.h-bar-bottom {
+    border-bottom: $dark-line;
 }
 
 #nav li a {

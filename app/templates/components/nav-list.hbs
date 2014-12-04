@@ -1,7 +1,9 @@
-<ul id="nav">
+<ul class="nav {{color}}">
 {{#each page in pages}}
-<li class="{{page.active}}">
-  <a href="{{page.href}}">Blog</a>
+<li {{bind-attr class="page.active"}}>
+  {{#link-to page.route}}
+    {{page.title}}
+  {{/link-to}}
 </li> 
 {{/each}}
 </ul> 

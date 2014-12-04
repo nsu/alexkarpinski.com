@@ -8,9 +8,18 @@ export default Ember.Component.extend({
       {
         title: "Home",
         route: "index",
-        href: "butts",
+      },
+      {
+        title: "DevOps",
+        route: "devops",
       },
     ];
-    _.map(pages, function(page){return page;});
-  }.property('my_path')
+    _.map(pages, function(page){
+      page.active = page.route === self.get('my_path');
+      return page;
+    });
+    return pages;
+  }.property('my_path'),
+  actions: {
+  }
 });

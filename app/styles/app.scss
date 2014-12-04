@@ -1,7 +1,7 @@
+@import 'app/styles/variables';
 @import 'bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
 @import 'app/styles/unpad';
 @import 'app/styles/type';
-@import 'app/styles/variables';
 
 body {
     padding: 0;
@@ -11,6 +11,17 @@ body {
     background-color: #F9FBF4;
     font-size: 12px;
     font-family: $copy-type;
+}
+
+a {
+    text-decoration:none;
+    &:hover {
+        text-decoration: underline;
+        color: inherit;
+    }
+    &:focus {
+        outline:none;
+    }
 }
 
 #logo{
@@ -26,19 +37,35 @@ ol, ul {
     list-style: none;
 }
 
-#nav {
+.nav {
+    float:left;
+    padding-left: 0px;
     height: 25px;
     margin: -1px 0;
+    margin-bottom: 28px;
     overflow: hidden;
     padding-bottom: 28px;
+    &.default > li > a {
+         color: $navbar-default-link-color;
+    }
+    &.inverse > li > a {
+         color: $navbar-inverse-link-color;
+    }
+    > li {
+        float: left;
+        padding: 0 25px 0 3px;
+        font-size: 15px;
+        line-height: 20px;
+        font-family: $copy-type;
+        > a:hover {
+            text-decoration: underline;
+            background-color: inherit;
+        }
+        > a:first-child {
+            padding-left: 0;
+        }
 }
 
-#nav li{
-    float: left;
-    padding: 0 25px 0 3px;
-    font-size: 15px;
-    line-height: 20px;
-    font-family: $copy-type;
 }
 
 #wrapper {
@@ -48,12 +75,6 @@ ol, ul {
 }
 
 img{border-style:none;}
-a{
-    text-decoration:none;
-    color:#fff;
-}
-a:focus {outline:none;}
-a:hover{text-decoration:underline;}
 h1, h2, h3, h4, h5, h6, li {
     line-height: 100%;
 }
@@ -90,16 +111,16 @@ h1, h2, h3, h4, h5, h6, li {
     border-bottom: $dark-line;
 }
 
-#nav li a {
+.nav li a {
     color: #000;
 }
 
-#nav .active a{
+.nav .active a{
     /*text-transform: uppercase;*/
     font-weight: 600;
 }
 
-#nav.four-oh-four li {
+.nav.four-oh-four li {
     font-size: 1.9em;
     font-weight: lighter;
 }

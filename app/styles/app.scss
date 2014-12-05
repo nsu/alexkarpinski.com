@@ -2,15 +2,10 @@
 @import 'bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
 @import 'app/styles/unpad';
 @import 'app/styles/type';
+@import 'app/styles/variables';
 
 body {
-    padding: 0;
-    margin: 0;
-    min-width: 1024px;
-    color: black;
-    background-color: #F9FBF4;
-    font-size: 12px;
-    font-family: $copy-type;
+    // background-color: #F9FBF4;
 }
 
 a {
@@ -245,20 +240,6 @@ h1, h2, h3, h4, h5, h6, li {
     color:#fff;
     font-size:16px;
     line-height:16px ;
-}
-.sub-nav{
-    float:left;
-    padding-top:6px;
-}
-.sub-nav li{
-    float:left;
-    padding:0 25px 0 3px;
-    font-size: 15px;
-    line-height: 20px;
-    font-family: $copy-type;
-}
-.sub-nav li a{
-    color:#fff;
 }
 
 .sub-text {

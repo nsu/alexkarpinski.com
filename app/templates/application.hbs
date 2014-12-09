@@ -14,7 +14,7 @@
     </div> 
 
       <div class="row">
-        <div class="col-md-offset-2">
+        <div class="large-1-offset-1 columns">
             {{#link-to "index"}}
                 <h1 id="logo">
                     Alex Karpinski
@@ -24,35 +24,19 @@
       </div> 
 
       <div id="nav-list" class="row">
-        <div class="col-md-offset-2">
-          {{ nav-list my_path=currentPath text-color="default"}}
+        <div class="large-5-offset-1 columns">
+          {{ nav-list my_path=currentPath color="jet"}}
         </div><!--  nav-list -->
       </div> 
-      
 
   </div> 
 </div> 
 
-<div class="promo-box">
-  <div class="holder">
-    <div class="img-holder">
-      <img alt="3 gears"src="images/gear.png">
-    </div> <!-- img-holder -->
-    <div class="info">
-      <h2>Development &amp; Design</h2>
-      <p>
-      Hello, my name is Alex. I'm a software developer, devops engineer, and web designer. And I'm trying to make the world a more interesting place.
-      </p>
-    </div> <!-- info -->
-  </div> <!-- holder -->
-</div> <!-- promo-box -->
-
-  <div class="main">
-  </div> <!-- main -->
+{{outlet}}
 
 <div id="footer">
   <div class="holder">
-      {{ nav-list my_path=currentPath color="inverse"}}
+      {{ nav-list my_path=currentPath color="snow"}}
     <!-- <ul class="sub&#45;nav"> -->
     <!--   <li class="active"><a href="/">Home</a></li> -->
     <!--   <li><a href="http://blog.alexkarpinski.com">Blog</a></li> -->
@@ -69,5 +53,3 @@
   </div><!--holder-->
 </div> <!--footer-->
 </div> <!--container-->
-
-{{outlet}}

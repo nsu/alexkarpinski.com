@@ -1,13 +1,10 @@
-// @import 'app/styles/variables';
 // @import 'bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
+@import 'bower_components/foundation/scss/foundation/settings';
 @import 'bower_components/foundation/scss/foundation';
+@import 'app/styles/_colors_classes';
+@import 'app/styles/variables';
 @import 'app/styles/unpad';
 @import 'app/styles/type';
-@import 'app/styles/variables';
-
-body {
-    // background-color: #F9FBF4;
-}
 
 a {
     text-decoration:none;
@@ -30,29 +27,29 @@ a {
 }
 
 ol, ul {
-    list-style: none;
 }
 
 .nav {
+    list-style: none;
     float:left;
-    padding-left: 0px;
-    height: 25px;
-    margin: -1px 0;
+    // padding-left: 0px;
+    // height: 25px;
+    margin: 0px 0;
     margin-bottom: 28px;
     overflow: hidden;
-    padding-bottom: 28px;
+    // padding-bottom: 28px;
     &.default > li > a {
-         color: $navbar-default-link-color;
+         // color: $jet;
     }
     &.inverse > li > a {
-         color: $navbar-inverse-link-color;
+         // color: $snow;
     }
     > li {
         float: left;
         padding: 0 25px 0 3px;
-        font-size: 15px;
-        line-height: 20px;
-        font-family: $copy-type;
+        // font-size: 15px;
+        // line-height: 20px;
+        // font-family: $copy-type;
         > a:hover {
             text-decoration: underline;
             background-color: inherit;
@@ -60,8 +57,7 @@ ol, ul {
         > a:first-child {
             padding-left: 0;
         }
-}
-
+    }
 }
 
 #wrapper {
@@ -105,10 +101,6 @@ h1, h2, h3, h4, h5, h6, li {
 }
 .h-bar-bottom {
     border-bottom: $dark-line;
-}
-
-.nav li a {
-    color: #000;
 }
 
 .nav .active a{
@@ -162,7 +154,7 @@ h1, h2, h3, h4, h5, h6, li {
 .promo-box .info h2 {
     font-size: 41px;
     line-height: 48px;
-    font-family: $copy-type;
+    // font-family: $copy-type;
     font-weight: 100;
     letter-spacing: 0;
     margin: 0 0 12px;
@@ -170,7 +162,7 @@ h1, h2, h3, h4, h5, h6, li {
 }
 
 .promo-box .info p {
-    font-family: $copy-type;
+    // font-family: $copy-type;
     font-weight: 100;
     font-size: 25px;
     letter-spacing: 0;
@@ -341,7 +333,7 @@ a .contentbox {
 }
 
 #contact-dialog p {
-    font-family: $copy-type;
+    // font-family: $copy-type;
     text-align: center;
     font-size: 23px;
     padding-top: 18px;

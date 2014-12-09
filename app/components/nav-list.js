@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   pages: function() {
     var self = this;
-    console.log("index" === self.get('my_path'));
+    console.log(self.get('my_path'));
     var pages = [
       {
         title: "Home",
@@ -19,7 +19,7 @@ export default Ember.Component.extend({
       return page;
     });
     return pages;
-  }.property('my_path'),
+  }.property('currentPath'),
   actions: {
   }
 });

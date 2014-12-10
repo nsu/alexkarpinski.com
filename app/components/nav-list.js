@@ -1,25 +1,20 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  pages: function() {
-    var self = this;
-    console.log(self.get('my_path'));
-    var pages = [
-      {
-        title: "Home",
-        route: "index",
-      },
-      {
-        title: "DevOps",
-        route: "devops",
-      },
-    ];
-    _.map(pages, function(page){
-      page.active = page.route === self.get('my_path');
-      return page;
-    });
-    return pages;
-  }.property('currentPath'),
+  pages: [
+    {
+      title: "Home",
+      route: "index",
+    },
+    {
+      title: "DevOps",
+      route: "devops",
+    },
+    {
+    title: "Resumé",
+    route: "resume",
+    },
+  ],
   actions: {
   }
 });

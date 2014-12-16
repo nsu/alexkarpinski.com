@@ -7,11 +7,9 @@
 
 a {
     &:focus {
-        color: inherit;
         text-decoration: none;
     }
     &:hover {
-        color: inherit;
         text-decoration: underline;
     }
 }
@@ -29,7 +27,6 @@ a {
     list-style: none;
     float:left;
     margin: 0px 0;
-    margin-bottom: 28px;
     overflow: hidden;
     a.active {
         font-weight: 600;
@@ -37,46 +34,52 @@ a {
     li {
         float: left;
         padding: 0 25px 0 3px;
-        > a:first-child {
-            padding-left: 0;
-        }
     }
 }
 
-#wrapper {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+h1 {
+
+}
+h2 {
+    // font-family: $body-font-family; 
+    font-size: 41px;
+    font-weight: 100;
 }
 
-img{border-style:none;}
-h1, h2, h3, h4, h5, h6, li {
-    line-height: 100%;
+h4 {
+    color: #333;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 20px;
+    line-height: 20px;
+    font-weight: normal;
 }
 
 #header {
-    background: url(/images/bg-header.gif) repeat-x;
+    // background: url(/images/bg-header.gif) repeat-x;
+    border-top: 9px solid $monsoon;
 }
 
 .github-link {
     // background: url(/images/btn-start.gif) no-repeat;
+    margin-top: -9px;
     background-color: #CDF7EB;
     border: 1px white  solid;
     border-top: none;
     height: 40px;
     width: 100%;
     float: right; 
-    color: #000;
+    color: $oil;
     text-align: center;
     font-size: 17px;
-    letter-spacing:2px;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
 }
 
 #github-link-lines {
     text-align: center;
     width:85%;
     margin: 0 auto;
-    margin-top: 3%;
+    margin-top: 4%;
 }
 
 .h-bar-top {
@@ -93,6 +96,13 @@ h1, h2, h3, h4, h5, h6, li {
 }
 
 
+
+.promo-box::before {
+    content: "";
+    background: url(/images/bg-promo.gif);
+}
+
+
 .promo-box {
     background: url(/images/bg-promo.gif);
     /*background: url(/images/square_bg.png);*/
@@ -100,26 +110,18 @@ h1, h2, h3, h4, h5, h6, li {
     border-width: 1px 0;
     border-style: solid;
     margin-bottom: 92px;
+    padding-top: 20px;
+    margin-top: 28px;
+    // min-height: 330px;
 }
 
-.promo-box .holder {
-    width: 912px;
-    padding: 0 0 0 20px;
-    margin: 0 auto;
-    height: 330px;
-}
-
-.promo-box .holder::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-.img-holder{
-    position: relative;
+.promo-image {
+    // position: relative;
     margin: -65px -7px -35px 34px;
-    padding-right: 20px;
-    float: right;
+    img {
+        max-width: none;
+        height: auto;
+    }
 }
 
 .promo-box .info {
@@ -130,16 +132,16 @@ h1, h2, h3, h4, h5, h6, li {
     width: 452px;
 }
 
-.promo-box .info h2 {
-    font-size: 41px;
-    line-height: 48px;
-    font-weight: 100;
-    letter-spacing: 0;
-    margin: 0 0 12px;
-    word-spacing: -4px;
-}
+// .promo-box .info h2 {
+//     font-size: 41px;
+//     line-height: 48px;
+//     font-weight: 100;
+//     letter-spacing: 0;
+//     margin: 0 0 12px;
+//     word-spacing: -4px;
+// }
 
-.promo-box .info p {
+.promo-box p {
     font-weight: 100;
     font-size: 25px;
     letter-spacing: 0;
@@ -187,19 +189,12 @@ h1, h2, h3, h4, h5, h6, li {
 
 /* footer start */
 #footer{
-    background:url("/images/bg-footer.gif") no-repeat scroll 50% 0 #383838;
-    margin:-7px 0 0;
-    min-height:61px;
-    padding:40px 2px 0 0;
+    // background:url("/images/bg-footer.gif") no-repeat scroll 50% 0 #383838;
+    background-color: $charcoal;
+    // margin:-7px 0 0;
+    padding:20px 0px 20px 0;
 }
-#footer .holder{
-    background:none repeat scroll 0 0 #535353;
-    margin:0 auto;
-    overflow:hidden;
-    padding:0 30px 0 17px;
-    width:931px;
-    word-spacing:-1px;
-}
+
 #footer .contact{
     float:right;
     text-align:right;
@@ -267,13 +262,6 @@ strong, b {
     color:mediumslateblue;
 }
 
-.left{
-    float: left;
-}
-.right {
-    float: right;
-}
-
 a .contentbox {
     color: black;
     text-decoration: none;
@@ -285,19 +273,22 @@ a .contentbox {
 }
 
 .big-box{
-    width: 910px;
-    height: 220px;
-    background: url(/images/longbox.png) no-repeat;
+    @media #{$small-up} { 
+        border: 2px solid $charcoal;
+        border-radius: 40px;
+    }
+    @media #{$large-up} { 
+        width: 910px;
+        height: 220px;
+        background: url(/images/longbox.png) no-repeat;
+        border: none;
+        border-radius: none;
+    }
     margin: 14px 14px 14px 14px;
-}
-
-.big-box h4 {
-    color: #333;
-    text-align: center;
-    font-size: 40px;
-    padding-top: 20px;
-    line-height: 20px;
-    font-weight: normal;
+    padding-top: 1rem;
+    a {
+        text-decoration: none;
+    }
 }
 
 .vert-divider {

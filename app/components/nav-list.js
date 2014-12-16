@@ -7,12 +7,16 @@ export default Ember.Component.extend({
       route: "index",
     },
     {
-      title: "DevOps",
-      route: "devops",
-    },
-    {
     title: "Resumé",
     route: "resume",
+    },
+    {
+      title: "Contact",
+      route: "contact",
+    },
+    {
+      title: "Projects",
+      route: "projects",
     },
   ],
   actions: {

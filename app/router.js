@@ -6,8 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('devops');
   this.route('resume');
+  this.route('contact');
+  this.route('projects');
 });
 
 export default Router;

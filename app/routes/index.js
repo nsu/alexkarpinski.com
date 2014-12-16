@@ -1,7 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function(){
-    console.log('poop');
+  actions:
+  {
+    'toggleContact': function(modalName){
+      return this.render(modalName, {
+        into: 'index',
+        outlet: 'contactPopover'
+      });
+    }
   }
 });

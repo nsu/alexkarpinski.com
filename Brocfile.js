@@ -19,6 +19,5 @@ var app = new EmberApp();
 //
 app.import('bower_components/lodash/dist/lodash.min.js');
 
-
 module.exports = app.toTree();
 

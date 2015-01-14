@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('resume');
   this.route('contact');
   this.route('projects');
+  this.route('skills');
 });
 
 export default Router;

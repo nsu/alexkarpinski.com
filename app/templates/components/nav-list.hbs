@@ -1,6 +1,6 @@
 <ul class="nav">
 {{#each page in pages}}
-<li {{bind-attr class="page.active"}}>
+<li>
   {{#link-to page.route class=color}}
     {{page.title}}
   {{/link-to}}

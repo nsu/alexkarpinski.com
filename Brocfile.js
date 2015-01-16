@@ -18,6 +18,13 @@ var app = new EmberApp();
 // along with the exports of each module as its value.
 //
 app.import('bower_components/lodash/dist/lodash.min.js');
+app.import('bower_components/font-awesome/fonts/fontawesome-webfont.ttf', {
+  destDir: 'fonts'
+});
+app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff', {
+  destDir: 'fonts'
+});
+
 
 module.exports = app.toTree();
 

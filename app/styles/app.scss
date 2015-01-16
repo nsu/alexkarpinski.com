@@ -1,6 +1,6 @@
 @import 'bower_components/foundation/scss/foundation/settings';
 @import 'bower_components/foundation/scss/foundation';
-@import 'bower_components/fontawesome/scss/font-awesome';
+@import 'bower_components/font-awesome/scss/font-awesome.scss';
 @import 'app/styles/_colors_classes';
 @import 'app/styles/variables';
 @import 'app/styles/unpad';
@@ -114,7 +114,7 @@ h5 {
     border-color: #D0E4D9;
     border-width: 1px 0;
     border-style: solid;
-    margin-bottom: 92px;
+    margin-bottom: 60px;
     padding-top: 20px;
     margin-top: 28px;
     // min-height: 330px;
@@ -283,6 +283,18 @@ a .contentbox {
 }
 
 .big-box{
+    @media #{$small-only} { 
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+        .box-action {
+            margin-bottom: 3rem;
+        }
+        .box-action:last-of-type {
+            margin-bottom: 1rem;
+        }
+    }
     @media #{$small-up} { 
         border: 2px solid $charcoal;
         border-radius: 40px;
@@ -294,24 +306,58 @@ a .contentbox {
         border: none;
         border-radius: none;
         // padding-left: 4rem;
-        // padding-right: 2rem;
+        padding-right: 2rem;
     }
     margin: 14px 14px 14px 14px;
     padding-top: 2rem;
     a {
         text-decoration: none;
     }
-    .box-action {
+    .vert-divider {
+        height: 150px;
     }
 }
 
 .vert-divider {
-        height: 85%;
-        border:2px solid #555;
+        height: 100%;
+        border: 2px solid $charcoal;
         border-radius: 40px;
         float: left;
-        vertical-align: middle;
 }
+
+.box-action{
+    margin-bottom: 1rem;
+    i {
+        font-size: 5rem;
+    }
+    &.box-action-small {
+        margin-top: 1rem;
+        i {
+            font-size: 4rem;
+        }
+        h5 {
+            font-size: 20px;
+        }
+        .tool-image {
+            text-align: center;
+            height: 70px;
+            padding-left:15px;
+        }
+        &:first-of-type {
+            @media #{$medium-up} { 
+                @include grid-column(
+                    $offset:1
+                )
+            }
+        }
+        &:last-of-type {
+            @include grid-column(
+                $last-column:false
+            )
+        }
+    }
+}
+
 
 #contact-dialog p {
     text-align: center;

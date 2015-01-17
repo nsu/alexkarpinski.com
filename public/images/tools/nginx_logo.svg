@@ -1,75 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   preserveAspectRatio="xMinYMin meet"
-  viewBox="0 0 55 25" 
-   id="svg2"
-   version="1.1"
-   inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="nginx_logo_release.svg">
-  <defs
-     id="defs4" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="23.971822"
-     inkscape:cy="48.217226"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:window-x="0"
-     inkscape:window-y="24"
-     inkscape:window-maximized="1"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0" />
-  <metadata
-     id="metadata7">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(-11.56225,-11.12422)">
-    <path
-       style="fill:none;stroke:#555555;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 14.047838,32.727592 0,-19.064695 19.062499,19.064695 0,-19.064695"
-       id="path2996"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccc" />
-    <path
-       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#555555;fill:#555555;fill-opacity:1;stroke:none;stroke-width:5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
-       d="M 44.6875,11.1875 44,12.46875 38.6875,22.125 38,23.34375 38.6875,24.5625 44,33.90625 l 0.71875,1.28125 1.46875,0 10.875,0 1.5625,0 0.6875,-1.40625 3.96875,-8 1.78125,-3.625 -4.03125,0 L 50.875,22.1875 c -1.320782,-0.01868 -2.535605,1.179086 -2.535605,2.5 0,1.320914 1.214823,2.518679 2.535605,2.5 L 57,27.15625 l -1.5,3.03125 -7.875,0 -3.90625,-6.875 3.9375,-7.125 8.377221,0 1.953125,4.007812 5.03125,0 -3.171875,-7.601562 -0.6875,-1.40625 -1.5625,0 -11.408471,0 z"
-       id="path2996-0"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccccccccccccscccccccccccccc" />
-    <g
-       id="g3920"
-       transform="translate(0.10586251,0.33010228)">
-    </g>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	 id="svg2" sodipodi:docname="nginx_logo_release.svg" inkscape:version="0.48.3.1 r9886" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="7.7 0.7 587.7 267.1"
+	 enable-background="new 7.7 0.7 587.7 267.1" xml:space="preserve">
+<sodipodi:namedview  inkscape:window-y="24" fit-margin-right="0" inkscape:pageopacity="0.0" inkscape:document-units="px" inkscape:pageshadow="2" inkscape:current-layer="layer1" inkscape:window-maximized="1" inkscape:window-x="0" fit-margin-bottom="0" id="base" fit-margin-left="0" showgrid="false" bordercolor="#666666" inkscape:cx="23.971822" inkscape:cy="48.217226" inkscape:zoom="2.8284271" fit-margin-top="0" borderopacity="1.0" pagecolor="#ffffff">
+	</sodipodi:namedview>
+<g id="layer1" transform="translate(-11.56225,-11.12422)" inkscape:groupmode="layer" inkscape:label="Layer 1">
+	
+		<path id="path2996" inkscape:connector-curvature="0" sodipodi:nodetypes="cccc" fill="none" stroke="#555555" stroke-width="60" stroke-linecap="round" stroke-linejoin="round" d="
+		M39.2,251.5V39.4l212.1,212.1V39.4"/>
+	<path id="path2996-0" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccccccccccscccccccccccccc" fill="#555555" d="
+		M380.2,11.8l-7.7,14.3l-59.1,107.4l-7.6,13.6l7.6,13.6l59.1,104l8,14.3h16.3h121h17.4l7.6-15.6l44.2-89l19.8-40.3H562l-113,0.3
+		c-14.7-0.2-28.2,13.1-28.2,27.8s13.5,28,28.2,27.8l68.2-0.3l-16.7,33.7h-87.6l-43.5-76.5l43.8-79.3h93.2l21.7,44.6h56l-35.3-84.6
+		l-7.7-15.6h-17.4H396.8H380.2z"/>
+	<g id="g3920" transform="translate(0.10586251,0.33010228)">
+	</g>
+</g>
 </svg>

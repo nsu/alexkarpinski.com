@@ -1,11 +1,27 @@
 <div class="main">
+    {{#each category in model}}
+    <div class="row">
+        <h2 class="text-center">{{category.name}}</h2>
+        {{#each group in category.skill_groups}}
+        <div class="row">
+            <div class="small-offset-1 small-10 medium-10 large-6 columns big-box">
+                {{#each skill in group}}
+                {{#tool-box image=skill.file}}
+                    {{skill.name}}
+                {{/tool-box}}
+                {{/each}}
+            </div> <!-- column big-box -->
+        </div>
+        {{/each}}
+    </div> 
+    {{/each}}
     <div class="row">
         <h2 class="text-center">Professional Use</h2>
     </div> 
     <div class="row">
         <div class="small-offset-1 small-10 medium-10 large-6 columns big-box">
             <div class="row">
-                {{#tool-box image="images/tools/apache_logo.svg"}}
+                {{#tool-box image="images/tools/apache_logo2.svg"}}
                    Apache
                 {{/tool-box}}
                 {{#tool-box image="images/tools/penguin.svg"}}
@@ -29,11 +45,11 @@
                 {{#tool-box image="images/tools/django_logo.svg"}}
                    Django
                 {{/tool-box}}
-                {{#tool-box image="images/tools/ember.svg"}}
-                   EmberJS
+                {{#tool-box image="images/tools/python.svg"}}
+                    Python
                 {{/tool-box}}
-                {{#tool-box image="images/tools/nodejs.svg"}}
-                    NodeJS
+                {{#tool-box image="images/tools/Vagrant.svg"}}
+                    Vagrant
                 {{/tool-box}}
                 {{#tool-box image="images/tools/git.svg"}}
                     Git
@@ -56,8 +72,8 @@
                 {{#tool-box image="images/tools/chef.svg"}}
                     Chef
                 {{/tool-box}}
-                {{#tool-box image="images/tools/git.svg"}}
-                    Git
+                {{#tool-box image="images/tools/js.svg"}}
+                    Javascript
                 {{/tool-box}}
                 {{#tool-box image="images/tools/TDD.svg"}}
                     TDD
@@ -94,7 +110,7 @@
                 {{#tool-box image="images/tools/foundation.svg"}}
                    Foundation
                 {{/tool-box}}
-                {{#tool-box image="images/tools/bootstrap2.svg"}}
+                {{#tool-box image="images/tools/bootstrap.svg"}}
                    Bootstrap
                 {{/tool-box}}
                 {{#tool-box image="images/tools/express.svg"}}
@@ -127,8 +143,8 @@
                 {{#tool-box image="images/tools/salt.svg"}}
                     Salt
                 {{/tool-box}}
-                {{#tool-box image="images/tools/mongodb.svg"}}
-                   MongoDB
+                {{#tool-box image="images/tools/illustrator.svg"}}
+                    Illustrator
                 {{/tool-box}}
             </div> <!-- row -->
         </div> <!-- column big-box -->

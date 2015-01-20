@@ -1,3 +1,17 @@
+<div class="grid-bg promo-box clearfix">
+    <div class="row">
+        <div class="small-offset-1 small-11 medium-6 columns">
+            <h4>Skills & Tools</h4>
+            <p>
+            These are some of the tools I use to solve problems. 
+            I'm happy to learn new ones.
+            </p>
+        </div> 
+        <div class="promo-image large-offset-1 medium-3 columns end show-for-medium-up ">
+            <img src="/images/calipers.svg">
+        </div> <!-- img-holder -->
+    </div> 
+</div> 
 <div class="main">
     {{#each category in model}}
     <div class="row">
@@ -15,139 +29,5 @@
         {{/each}}
     </div> 
     {{/each}}
-    <div class="row">
-        <h2 class="text-center">Professional Use</h2>
-    </div> 
-    <div class="row">
-        <div class="small-offset-1 small-10 medium-10 large-6 columns big-box">
-            <div class="row">
-                {{#tool-box image="images/tools/apache_logo2.svg"}}
-                   Apache
-                {{/tool-box}}
-                {{#tool-box image="images/tools/penguin.svg"}}
-                   Linux
-                {{/tool-box}}
-                {{#tool-box image="images/tools/nginx_logo.svg"}}
-                   NGinx
-                {{/tool-box}}
-                {{#tool-box image="images/tools/html.svg"}}
-                   HTML &amp; CSS
-                {{/tool-box}}
-                {{#tool-box image="images/tools/jquery_logo.svg"}}
-                   jQuery
-                {{/tool-box}}
-            </div> <!-- row -->
-        </div> <!-- column big-box -->
-    </div>
-    <div class="row">
-        <div class="small-offset-1 small-10 medium-10 large-6 columns big-box">
-            <div class="row">
-                {{#tool-box image="images/tools/django_logo.svg"}}
-                   Django
-                {{/tool-box}}
-                {{#tool-box image="images/tools/python.svg"}}
-                    Python
-                {{/tool-box}}
-                {{#tool-box image="images/tools/Vagrant.svg"}}
-                    Vagrant
-                {{/tool-box}}
-                {{#tool-box image="images/tools/git.svg"}}
-                    Git
-                {{/tool-box}}
-                {{#tool-box image="images/tools/AWS.svg"}}
-                    AWS
-                {{/tool-box}}
-            </div> <!-- row -->
-        </div> <!-- column big-box -->
-    </div>
-    <div class="row">
-        <div class="small-offset-1 small-10 medium-10 large-6 columns big-box">
-            <div class="row">
-                {{#tool-box image="images/tools/DNS.svg"}}
-                   DNS
-                {{/tool-box}}
-                {{#tool-box image="images/tools/jira.svg"}}
-                   Jira
-                {{/tool-box}}
-                {{#tool-box image="images/tools/chef.svg"}}
-                    Chef
-                {{/tool-box}}
-                {{#tool-box image="images/tools/js.svg"}}
-                    Javascript
-                {{/tool-box}}
-                {{#tool-box image="images/tools/TDD.svg"}}
-                    TDD
-                {{/tool-box}}
-            </div> <!-- row -->
-        </div> <!-- column big-box -->
-    </div><div class="row">
-        <h2 class="text-center">Personal Projects</h2>
-    </div> 
-    <div class="row">
-        <div class="small-offset-1 small-10 medium-10 large-6 columns big-box">
-            <div class="row">
-                {{#tool-box image="images/tools/ember.svg"}}
-                   EmberJS
-                {{/tool-box}}
-                {{#tool-box image="images/tools/SASS.svg"}}
-                   SASS
-                {{/tool-box}}
-                {{#tool-box image="images/tools/nodejs.svg"}}
-                    NodeJS
-                {{/tool-box}}
-                {{#tool-box image="images/tools/couchdb.svg"}}
-                   CouchDB
-                {{/tool-box}}
-                {{#tool-box image="images/tools/mongodb.svg"}}
-                   MongoDB
-                {{/tool-box}}
-            </div> <!-- row -->
-        </div> <!-- column big-box -->
-    </div>
-    <div class="row">
-        <div class="small-offset-1 small-10 medium-10 large-6 columns big-box">
-            <div class="row">
-                {{#tool-box image="images/tools/foundation.svg"}}
-                   Foundation
-                {{/tool-box}}
-                {{#tool-box image="images/tools/bootstrap.svg"}}
-                   Bootstrap
-                {{/tool-box}}
-                {{#tool-box image="images/tools/express.svg"}}
-                    ExpressJS
-                {{/tool-box}}
-                {{#tool-box image="images/tools/ruby.svg"}}
-                    Ruby
-                {{/tool-box}}
-                {{#tool-box image="images/tools/mongodb.svg"}}
-                   MongoDB
-                {{/tool-box}}
-            </div> <!-- row -->
-        </div> <!-- column big-box -->
-    </div> <!-- row -->
-    <div class="row">
-        <h2 class="text-center">Toys</h2>
-    </div> 
-    <div class="row">
-        <div class="small-offset-1 small-10 medium-10 large-6 columns big-box">
-            <div class="row">
-                {{#tool-box image="images/tools/angular.svg"}}
-                    Angular
-                {{/tool-box}}
-                {{#tool-box image="images/tools/broccoli.svg"}}
-                    Broccoli
-                {{/tool-box}}
-                {{#tool-box image="images/tools/rails.svg"}}
-                    Rails
-                {{/tool-box}}
-                {{#tool-box image="images/tools/salt.svg"}}
-                    Salt
-                {{/tool-box}}
-                {{#tool-box image="images/tools/illustrator.svg"}}
-                    Illustrator
-                {{/tool-box}}
-            </div> <!-- row -->
-        </div> <!-- column big-box -->
-    </div>{{outlet}}
 </div> <!-- main -->
 {{outlet}}

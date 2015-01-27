@@ -48,7 +48,14 @@ export default Ember.Route.extend({
               {name: "HTML/CSS", file:"images/tools/html.svg"},
               {name: "Chef", file:"images/tools/chef.svg"},
               {name: "Jira", file:"images/tools/jira.svg"},
-          ]
+          ],
+          sample: {
+              "sample-description": "",
+              // maybe do "link-content" instead and specify HTML to insert
+              // inside <a> tag?
+              "image-element": '<i class="fa fa-pie-chart"></i>',
+              "file": "work-samples/cesd-example.pdf"
+            },
         },
         {
           company:      "Freelance Development",
@@ -66,7 +73,14 @@ export default Ember.Route.extend({
               {name: "Bootstrap", file:"images/tools/bootstrap.svg"},
               {name: "Git", file:"images/tools/git.svg"},
               {name: "Apache", file:"images/tools/apache.svg"},
-          ]
+          ],
+          sample: {
+              "sample-description": "",
+              // maybe do "link-content" instead and specify HTML to insert
+              // inside <a> tag?
+              "image-element": '<i class="fa fa-sitemap"></i>',
+              "file": "work-samples/sudo-example.png"
+            },
         },
         {
           company:      "GoSudo.com",
@@ -79,15 +93,22 @@ export default Ember.Route.extend({
                         configuration management, and designing the \
                         environments for testing, staging and production.",
           tools:[
-              {name: "Django", file:"images/tools/django.svg"},
-              {name: "Python", file:"images/tools/python.svg"},
               {name: "Chef", file:"images/tools/chef.svg"},
               {name: "Linux", file:"images/tools/penguin.svg"},
+              {name: "AWS", file:"images/tools/aws.svg"},
+              {name: "Ruby", file:"images/tools/ruby.svg"},
               {name: "Git", file:"images/tools/git.svg"},
-              {name: "Javascript", file:"images/tools/javascript.svg"},
-              {name: "Testing", file:"images/tools/tdd.svg"},
-              {name: "HTML/CSS", file:"images/tools/html.svg"},
-          ]
+              {name: "DNS", file:"images/tools/dns.svg"},
+              {name: "NGinx", file:"images/tools/nginx.svg"},
+              {name: "Jira", file:"images/tools/jira.svg"},
+          ],
+          sample: {
+              "description": "Lorem ipsum dolor sit amet, putent pertinax ut cum, erat impetus cum an, ex quot virtute pro. Nec ubique noluisse eu. ",
+              // maybe do "link-content" instead and specify HTML to insert
+              // inside <a> tag?
+              "image-element": '<i class="fa fa-sitemap"></i>',
+              "file": "work-samples/sudo-example.png"
+            },
         }
       ];
       // Display most recent jobs at the top of the page.

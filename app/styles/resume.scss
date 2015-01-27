@@ -66,10 +66,44 @@
     display: none;
 }
 
-.work-sample {
-    display: inline-block;
+.sample-link {
+    text-align:center;
+    i {
+        font-size: 65px
+    }
 }
 
+.sample-description-row.row{
+    margin-top: 10px;
+}
+
+.sample-description {
+    color: #555;
+    line-height: 1.2rem;
+}
+
+// standardize across these two names 
+// maybe resume-tool-body? 
+.resume-tool-list.row,
+.sample-body
+{
+    // spacing between section title and resume-detail body
+    margin-top: 20px;
+}
+
+.resume-tool{
+    // spacing between lines of tool-icons
+    margin-bottom: 20px;
+}
+
+.resume-tool-image{
+    height: 100%;
+}
+
+.resume-tool-image-holder {
+    height: 50px;
+    text-align: center;
+}
 // The last tool in a list on the resume page needs to have the end class added
 // or else it will get pulled over to the right side and look odd
 .resume-tool:last-child { 
@@ -79,4 +113,5 @@
 .resume-tool-name {
     font-size: .7rem; 
     text-align: center;
+    margin-top: 5px;
 }

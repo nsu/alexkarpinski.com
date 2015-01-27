@@ -53,7 +53,7 @@ def getCalendarEventsByDay(request, start, stop):
         # We could grab all the events across all schedules and times at once
         # but we do it day-by-day and schedule-by-schedule
         # so that the caching is more generic
-        for index, day in enumerate(date_range):
+        for day in date_range:
             # Generate cache key for this unique schedule/date combination
             day_key = "staffcal_%s_%s_%s_%s" % (schedule.id, day.year, day.month, day.day)
             result = cache.get(day_key)

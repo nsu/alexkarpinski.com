@@ -1,0 +1,72 @@
+<div class="resume-job">
+        <div class="row job-title">
+            <div class="columns medium-offset-3 medium-6 end">
+                <div class="job-heading">
+                    <h5 class="job-company">{{job.company}}</h5> 
+                    <a class="pull-right">
+                        <i class="fa fa-toggle-down"></i>
+                    </a>
+                </div> 
+            </div> 
+        </div> 
+        <div class="row job-body">
+            <div class="columns medium-3 job-details">
+                <!-- <p class="job-company">MOTU</p> -->
+                <!-- <p class="job-title">Operations Engineer</p> --> 
+                <p class="job-time">{{job.position}}</p>
+                <p class="job-time">{{job.start_year}}-{{job.end_year}}</p>
+            </div> 
+            <div class="columns medium-7 large-6 end job-description">
+                <div class="job-text-description">
+                    {{job.description}}
+                </div> 
+                <div class="hide row job-extra-info" style="margin-top: 10px;">
+                    <div class="columns medium-6">
+                        <div class="row" style="text-transform: uppercase;
+                        font-size: 12px;
+                        color: #999; font-family: Futura; text-align:
+                        center; margin-bottom:15px">
+                            &mdash; tools &mdash;
+                        </div> 
+                        <div class="row">
+                            <div class="columns medium-3">
+                                <div style="height:50px">
+                                    <img style="height:100%" src="images/tools/ember.svg" type="image/svg+xml"/>
+                                </div> 
+                            </div>
+                            <div class="columns medium-3">
+                                <div style="height:50px">
+                                    <img style="height:100%" src="images/tools/vagrant.svg" type="image/svg+xml"/>
+                                </div> 
+                            </div> 
+                            <div class="columns medium-3">
+                                <div style="height:50px">
+                                    <img style="height:100%" src="images/tools/chef.svg" type="image/svg+xml"/>
+                                </div> 
+                            </div>
+                            <div class="columns medium-3">
+                                <div style="height:50px">
+                                    <img style="height:100%" src="images/tools/javascript.svg" type="image/svg+xml"/>
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div>
+                    <div class="columns medium-6 job-samples" style="font-size: 12px">
+                        <div class="row" style="text-transform: uppercase;
+                        font-size: 12px;
+                        color: #999; font-family: Futura; text-align:
+                        center; margin-bottom:15px">
+                            &mdash; Samples &mdash;
+                        </div> 
+                        <div class="work-sample">
+                            NGinx
+                        </div> 
+                        <div class="work-sample">
+                            Python
+                        </div>
+                    </div> <!-- job-samples -->
+                </div> <!-- job-extra-info -->
+            </div> <!-- job-description -->
+        </div> <!-- job-body -->
+</div>
+{{yield}}

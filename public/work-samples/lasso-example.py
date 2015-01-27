@@ -68,7 +68,7 @@ def getCalendarEventsByDay(request, start, stop):
                                             exclude_outside=True,
                                             split_by_day=True)
                 # Throw away extra day on the end
-                if events: events.pop() 
+                if events: events.pop()
                 flat_schedule['days'] += events
                 cache.set(day_key, smart_serialize(events), 0)
                 CK, created = CacheKey.objects.get_or_create(schedule=schedule, key=day_key)

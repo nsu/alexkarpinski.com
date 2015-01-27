@@ -1,0 +1,123 @@
+# Force all HTTP -> HTTPS
+server {
+        listen      80;
+        server_name <%= node['nginx']['server_name'] %>;
+        rewrite     ^ https://$server_name$request_uri? permanent;
+}
+
+
+
+server {
+        server_name <%= node['nginx']['server_name'] %>;
+       
+        listen               443;
+        ssl                  on;
+        ssl_certificate      /etc/nginx/ssl/server.pem;
+        ssl_certificate_key  /etc/nginx/ssl/server.key;
+        keepalive_timeout    70;
+
+        ########################
+        #### STATIC FILES  ####
+        ########################
+
+        location /favicon.ico {
+            alias /srv/static/themes/classy/img/favicon.png;
+        }
+
+        location /documents {
+                internal; # requires Django-authentication.
+                alias /srv/lasso/docs/_build/html/;
+                index index.html;
+        }
+       
+        location /static {
+                alias /srv/static/;
+        }
+       
+        location /media {
+                alias /srv/media/;
+        }
+
+        location \.(png|jpg|jpeg|gif|ico)$ {
+                expires 1w;
+        }
+
+        location \.(js|css|)$ {
+                expires 12h;
+        }      
+
+        location /robots.txt {
+                alias /srv/robots.txt;
+        }        
+        
+        # Some static files need authentication
+        # (training documents, security cameras).
+        # URLS beginning in /private hit Django
+        # and get X-Accel-Redirect'd here
+        location /private_internal {
+                internal; # Django-authentication
+                alias   /srv/protected/;
+        }
+
+        #########################
+        #### DYNAMIC SERVERS ####
+        #########################
+
+        # mediawiki uses extensive rewrites for pretty URLs
+        # we'll try serving the files (because of static assets)
+        # but then failover into the wiki_rewrite location
+        location /itwiki {
+                internal; # Django-authentication
+                alias /srv/php/itwiki;
+                try_files $uri $uri/ @wiki_rewrite;
+                index index.php index.html index.htm;
+        }
+
+        location @wiki_rewrite {
+                internal; # Django-authentication
+                rewrite ^/itwiki/([^/]*)(?:\?(.*))? /itwiki/index.php?title=$1&$2 last;
+        }
+
+        # FastCGI location. 
+        # pass over local TCP socket
+        location ~ \.php$ {
+                internal; # Django-authentication
+                root /srv/php;
+                try_files $uri =404;
+                fastcgi_param HTTPS on;
+                fastcgi_pass 127.0.0.1:9000;
+                fastcgi_index index.php;
+                include fastcgi_params;
+        }
+
+        # If the request doesn't go to some other location it's going to gunicorn.
+        # Lasso can take care of itself. Nginx is for terminating SSL, serving
+        # static assets and reverse proxying
+        location ^~/ {
+                # NGINX keepalive bug with reverse-proxies
+                # can double request time
+                keepalive_requests 0;
+
+                # Go over a UNIX socket for lowest latency
+                proxy_pass         http://unix:/tmp/lasso.sock:/;
+                proxy_redirect     off;
+               
+                proxy_set_header   Host              $host;
+                proxy_set_header   X-Real-IP         $remote_addr;
+                proxy_set_header   X-Forwarded-For   $proxy_add_x_forwarded_for;
+                proxy_set_header   X-Forwarded-Proto https;
+                proxy_max_temp_file_size 0;
+               
+                client_max_body_size       10m;
+                client_body_buffer_size    128k;
+               
+                proxy_connect_timeout      90;
+                proxy_send_timeout         90;
+                proxy_read_timeout         90;
+               
+                proxy_buffer_size          4k;
+                proxy_buffers              4 32k;
+                proxy_busy_buffers_size    64k;
+                proxy_temp_file_write_size 64k;
+        }
+}

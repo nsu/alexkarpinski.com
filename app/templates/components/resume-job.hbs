@@ -11,8 +11,6 @@
         </div> 
         <div class="row job-body">
             <div class="columns medium-3 job-details">
-                <!-- <p class="job-company">MOTU</p> -->
-                <!-- <p class="job-title">Operations Engineer</p> --> 
                 <p class="job-time">{{job.position}}</p>
                 <p class="job-time">
                 {{! only show the dash and end year if one is defined }}
@@ -28,37 +26,39 @@
                 </div> 
                 <div class="row job-extra-info" style="margin-top: 10px;">
                     <div class="columns medium-6">
-                        <div class="row" style="text-transform: uppercase;
-                        font-size: 12px;
-                        color: #999; font-family: Futura; text-align:
-                        center; margin-bottom:15px">
+                        <div class="row small-title text-center">
                             &mdash; tools &mdash;
                         </div> 
                         <div class="row resume-tool-list">
                             {{#each tool in job.tools}}
-                            <div class="columns medium-3 resume-tool">
-                                <div style="height:50px">
-                                    <img style="height:100%" src="{{tool.file}}" type="image/svg+xml"/>
+                            <div class="columns medium-4 resume-tool">
+                                <div class="resume-tool-image-holder">
+                                    <img class="resume-tool-image" src="{{tool.file}}" />
                                 </div> 
                                 <p class="resume-tool-name">{{tool.name}}</p>
                             </div>
                             {{/each}}
                         </div> 
                     </div>
-                    <div class="columns medium-6 job-samples" style="font-size: 12px">
-                        <div class="row" style="text-transform: uppercase;
-                        font-size: 12px;
-                        color: #999; font-family: Futura; text-align:
-                        center; margin-bottom:15px">
-                            &mdash; Samples &mdash;
+                    <div class="columns medium-6 job-sample">
+                        <div class="row small-title text-center">
+                            &mdash; Sample &mdash;
                         </div> 
-                        <div class="work-sample">
-                            NGinx
-                        </div> 
-                        <div class="work-sample">
-                            Python
-                        </div>
-                    </div> <!-- job-samples -->
+                        <div class="sample-body">
+                            <div class="row">
+                                <div class="columns medium-12 text-center">
+                                    <a class="sample-link" href="{{job.sample.file}}">
+                                        {{{job.sample.image-element}}}
+                                    </a> 
+                                </div> 
+                            </div> 
+                            <div class="sample-description-row row">
+                                <div class="columns medium-12">
+                                    <p class="sample-description">{{job.sample.description}}</p>
+                                </div> 
+                            </div> 
+                        </div> <!-- sample-body -->
+                    </div> <!-- job-sample -->
                 </div> <!-- job-extra-info -->
             </div> <!-- job-description -->
         </div> <!-- job-body -->

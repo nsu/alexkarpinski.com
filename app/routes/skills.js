@@ -2,6 +2,9 @@ import Ember from 'ember';
 
 
 export default Ember.Route.extend({
+  setupController: function(controller, skills) {
+    controller.set('model', skills);
+  },
   model: function(){
     // List of categories (pro, personal, toy) each containing a
     // list of tool-name/file-name pairs for iteration in template
@@ -55,14 +58,6 @@ export default Ember.Route.extend({
          ]
       },
    ];
-   skill_categories = _.map(skill_categories, function(category) {
-    var grouped_skills = [];
-    while (category.skills.length > 0) {
-      grouped_skills.push( category.skills.splice(0, 5));
-    } 
-    category.skill_groups = grouped_skills;
-    return category;
-   });
    return skill_categories;
  }
 });

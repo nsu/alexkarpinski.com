@@ -13,10 +13,10 @@
     </div> 
 </div> 
 <div class="main">
-    {{#each category in model}}
+    {{#each category in controller}}
     <div class="row">
-        <h2 class="text-center">{{category.name}}</h2>
-        {{#each group in category.skill_groups}}
+        <h2 class="text-center">{{category.model.name}}</h2>
+        {{#each group in category.grouped_skills}}
         <div class="row">
             <div class="small-offset-1 small-10 medium-10 large-6 columns big-box">
                 {{#each skill in group}}

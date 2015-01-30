@@ -26,7 +26,17 @@ export default Ember.Route.extend({
               {name: "HTML/CSS", file:"images/tools/html.svg"},
               {name: "Apache", file:"images/tools/apache.svg"},
               {name: "NGinx", file:"images/tools/nginx.svg"},
-          ]
+          ],
+          sample: {
+              "description": "This is a sample of Python code from the \
+              <em>Lasso</em> project. <em>Lasso</em> is used for managing \
+              employee work schedules. This code is a higher level interface \
+              to the schedule system. The results from this function are \
+              rendered to a full display of an employees shifts, and those of \
+              his or her coworkers.",
+              "image-element": '<i class="fa fa-pie-chart"></i>',
+              "file": "work-samples/lasso-example.py"
+            },
         },
         {
           company:      "University of Massachusetts - CESD",
@@ -50,9 +60,11 @@ export default Ember.Route.extend({
               {name: "Jira", file:"images/tools/jira.svg"},
           ],
           sample: {
-              "sample-description": "",
-              // maybe do "link-content" instead and specify HTML to insert
-              // inside <a> tag?
+              "description": "This is a presentation outlining improvements to \
+              be made to CESD's development process. The focus is on \
+              decentralization, version control, and automation. Working at \
+              CESD informed my opinion on the consequences of technical debt \
+              and delayed modernization",
               "image-element": '<i class="fa fa-pie-chart"></i>',
               "file": "work-samples/cesd-example.pdf"
             },
@@ -63,9 +75,10 @@ export default Ember.Route.extend({
           end_year:     "2014",
           // position:     "Software Engineer",
           description:  "I have been contracted by <em>Sleep No More NYC</em>, \
-                        <em>UMass</em>, and <em>Lawrence University</em> to build applications, \
-                        maintain web presences and consult on systems \
-                        administration.",
+                        <em>The University of Massachusetts</em>, and \
+                        <em>Lawrence University</em> to build applications, \
+                        maintain web presences and consult on technical \
+                        infrastructure.",
           tools:[
               {name: "HTML/CSS", file:"images/tools/html.svg"},
               {name: "Javascript", file:"images/tools/javascript.svg"},
@@ -75,7 +88,10 @@ export default Ember.Route.extend({
               {name: "Apache", file:"images/tools/apache.svg"},
           ],
           sample: {
-              "sample-description": "",
+              "description": "HTML, CSS and JS from my most recent \
+                                    project &mdash; this website. This code \
+                                    generates the <em>Skills & Tools</em> page \
+                                    from an EmberJS backing.",
               // maybe do "link-content" instead and specify HTML to insert
               // inside <a> tag?
               "image-element": '<i class="fa fa-sitemap"></i>',
@@ -101,11 +117,15 @@ export default Ember.Route.extend({
               {name: "DNS", file:"images/tools/dns.svg"},
               {name: "NGinx", file:"images/tools/nginx.svg"},
               {name: "Jira", file:"images/tools/jira.svg"},
+              {name: "Python", file:"images/tools/python.svg"},
           ],
           sample: {
-              "description": "Lorem ipsum dolor sit amet, putent pertinax ut cum, erat impetus cum an, ex quot virtute pro. Nec ubique noluisse eu. ",
-              // maybe do "link-content" instead and specify HTML to insert
-              // inside <a> tag?
+              "description": "This chart represents the application \
+                            infrastructure for Sudo. The stack was built \
+                            across multiple AWS AZs and included replication, \
+                            load balancing, and automated failure recovery for \
+                            all resources. I implemented this plan using AWS \
+                            and Chef. Source files from Sudo are under NDA.",
               "image-element": '<i class="fa fa-sitemap"></i>',
               "file": "work-samples/sudo-example.png"
             },

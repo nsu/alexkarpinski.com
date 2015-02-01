@@ -43,6 +43,16 @@ module.exports = function(environment) {
   if (environment === 'production') {
 
   }
+  ENV.contentSecurityPolicy = {
+    'default-src': "*",
+    'script-src': "*",
+    'font-src': "*",
+    'connect-src': "*",
+    'img-src': "*",
+    'object-src': "*",
+    'style-src': "*",
+    'media-src': "*"
+  };
 
   return ENV;
 };

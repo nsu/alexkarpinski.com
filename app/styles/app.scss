@@ -335,7 +335,6 @@ a .contentbox {
         background: url(/images/longbox.png) no-repeat;
         border: none;
         border-radius: none;
-        // padding-left: 4rem;
         padding-right: 2rem;
     }
     margin: 14px 14px 14px 14px;
@@ -359,6 +358,7 @@ a .contentbox {
     margin-bottom: 1rem;
     i {
         font-size: 5rem;
+        margin-top: 15px;
     }
     &.box-action-small {
         margin-top: 1rem;

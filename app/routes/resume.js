@@ -43,13 +43,13 @@ export default Ember.Route.extend({
           start_year:   "2014",
           // end_year:     "2014",
           position:     "Software Consultant",
-          description:  "I Designed a plan for the modernization and \
-                        improvement of Drupal development at UMass' Center for\
-                        Educational Design. This included the use of version \
-                        control, development environments, issue tracking and \
-                        release management.  Improving the Center required \
-                        research observation, user education, and \
-                        technical development.",
+          description:  "I designed a plan for the modernization and \
+                        improvement of Drupal development at UMass' Center for \
+                        Educational Software Development. This included the \
+                        use of version control, development environments, \
+                        issue tracking and release management.  Improving the \
+                        Center required research observation, user education, \
+                        and technical development.",
           tools:[
               {name: "Drupal", file:"images/tools/drupal.svg"},
               {name: "Vagrant", file:"images/tools/vagrant.svg"},

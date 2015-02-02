@@ -83,6 +83,22 @@ h6 {
     margin-bottom:15px
 }
 
+.project-description {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.project-title:after {
+    // unicode equivalent of &nbsp;
+    content: "\0000a0\0000a0\0000a0";
+    min-width: 10px;
+    margin-left: 6px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 50%);
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    background-position: 0 6px;
+}
+
 #header {
     // background: url(/images/bg-header.gif) repeat-x;
     border-top: 9px solid $monsoon;
@@ -256,19 +272,16 @@ strong, b {
 }
 
 .contentbox {
-    width: 422px;
-    height: 270px;
+    // these paddings put all content within the radius of the corner-circles
+    padding-left: 40px;
+    padding-right: 60px;
+    // make sure the div expands to the full bg-img
+    // this should be responsivized
+    height: 262px;
+    // width: 422px;
+    // height: 270px;
     background: url(/images/contentbox.png) no-repeat;
-    margin: 14px 14px 14px 14px;
-}
-
-.contentbox p {
-    height: 150px;
-    width: 200px;
-    padding-left: 60px;
-    padding-top: 25px;
-    font-size: 16px;
-    overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .contentbox h4 {
@@ -280,12 +293,12 @@ strong, b {
     font-weight: lighter;
 }
 
+// TODO semanticize these classes (et al. contentbox)
 .contentbox.demo img {
     margin:0px auto;
     display: block;
     padding-top: 20px;
-    width: 200px;
-    filter: blur(1px);
+    height: 125px;
     -webkit-filter: grayscale(1) blur(1px);
 }
 
@@ -295,12 +308,13 @@ strong, b {
 
 .contentbox.demo p {
     margin-top: -10px;
-    width: 70%;
+    line-height: 100%;
+    color: #555;
 }
 
-.promo-box .info p > a, p > a {
-    color:mediumslateblue;
-}
+// .promo-box .info p > a, p > a {
+//     color:mediumslateblue;
+// }
 
 a .contentbox {
     color: black;
@@ -308,7 +322,10 @@ a .contentbox {
 }
 
 .contentbox p {
-    color: black;
+    // padding-left: 60px;
+    padding-top: 25px;
+    font-size: 16px;
+    overflow: hidden;
     text-decoration: none;
 }
 
@@ -375,6 +392,9 @@ a .contentbox {
             object {
                 max-height: 120px;
             }
+        }
+        .tool-name {
+            margin-top:2rem;           
         }
         &:first-of-type {
             @media #{$medium-up} { 

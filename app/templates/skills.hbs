@@ -1,13 +1,13 @@
 <div class="grid-bg promo-box clearfix">
     <div class="row">
-        <div class="small-offset-1 small-11 medium-6 columns">
+        <div class="columns small-offset-1 small-11 medium-6">
             <h4>Skills & Tools</h4>
             <p>
             These are some of the tools I use to solve problems. 
             I'm happy to learn new ones.
             </p>
         </div> 
-        <div class="promo-image large-offset-1 medium-3 columns end show-for-medium-up ">
+        <div class="columns large-offset-1 medium-3 end show-for-medium-up promo-image">
             <img src="/images/calipers.svg">
         </div> <!-- img-holder -->
     </div> 
@@ -18,7 +18,7 @@
         <h2 class="text-center">{{category.model.name}}</h2>
         {{#each group in category.grouped_skills}}
         <div class="row">
-            <div class="small-offset-1 small-10 medium-10 large-6 columns big-box">
+            <div class="columns small-offset-1 small-10 medium-10 large-6 big-box">
                 {{#each skill in group}}
                 {{#tool-box image=skill.file}}
                     {{skill.name}}
@@ -30,4 +30,3 @@
     </div> 
     {{/each}}
 </div> <!-- main -->
-{{outlet}}

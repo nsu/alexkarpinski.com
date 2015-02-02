@@ -1,0 +1,133 @@
+==> app/templates/skills.hbs <==
+<div class="grid-bg promo-box clearfix">
+    <div class="row">
+        <div class="columns small-offset-1 small-11 medium-6 promo-text">
+            <h4>Skills & Tools</h4>
+            <p>
+            These are some of the tools I use to solve problems. 
+            I'm happy to learn new ones.
+            </p>
+        </div> <!-- promo-text -->
+        <div class="columns large-offset-1 medium-3 end show-for-medium-up promo-image">
+            <img src="/images/calipers.svg">
+        </div> <!-- promo-img -->
+    </div> <!-- row -->
+</div> <!-- promo-box -->
+<div class="main">
+    {{#each category in controller}}
+    <div class="row">
+        <h2 class="text-center">{{category.model.name}}</h2>
+        {{#each group in category.grouped_skills}}
+        <div class="row">
+            <div class="columns small-offset-1 small-10 medium-10 large-6 big-box">
+                {{#each skill in group}}
+                {{#tool-box image=skill.file}}
+                    {{skill.name}}
+                {{/tool-box}}
+                {{/each}}
+            </div> <!-- big-box -->
+        </div> <!-- row -->
+        {{/each}}
+    </div> <!-- row -->
+    {{/each}}
+</div> <!-- main -->
+
+==> app/templates/components/tool-box.hbs <==
+<!-- All of the real styling comes from the classes applied on the parent div in tool-box.js -->
+<div class="tool-image">
+    <object class="vert-align" data="{{image}}" type="image/svg+xml"> </object>
+</div> <!-- tool-image -->
+<h5 class="tool-name">{{yield}}</h5>
+
+==> app/components/tool-box.js <==
+import Ember from 'ember';
+
+export default Ember.Component.extend({
+  classNames: ["columns", "medium-2", "box-action", "box-action-small", "text-center"]
+});
+
+==> app/routes/skills.js <==
+import Ember from 'ember';
+
+
+export default Ember.Route.extend({
+  setupController: function(controller, skills) {
+    controller.set('model', skills);
+  },
+  model: function(){
+    // List of categories (pro, personal, toy) each containing a
+    // list of tool-name/file-name pairs for iteration in template
+    var skill_categories = [
+      {
+        name: "Professional Use", 
+        skills: [
+          {name: "Python", file:"images/tools/python.svg"},
+          {name: "Chef", file:"images/tools/chef.svg"},
+          {name: "Linux", file:"images/tools/penguin.svg"},
+          {name: "Git", file:"images/tools/git.svg"},
+          {name: "Javascript", file:"images/tools/javascript.svg"},
+
+          {name: "Django", file:"images/tools/django.svg"},
+          {name: "jQuery", file:"images/tools/jquery.svg"},
+          {name: "HTML/CSS", file:"images/tools/html.svg"},
+          {name: "AWS", file:"images/tools/aws.svg"},
+          {name: "Testing", file:"images/tools/tdd.svg"},
+
+          {name: "NGinx", file:"images/tools/nginx.svg"},
+          {name: "Apache", file:"images/tools/apache.svg"},
+          {name: "DNS", file:"images/tools/dns.svg"},
+          {name: "Vagrant", file:"images/tools/vagrant.svg"},
+          {name: "Jira", file:"images/tools/jira.svg"}
+         ]
+      },
+      {
+        name: "Personal Use", 
+        skills: [
+          {name: "Ruby", file:"images/tools/Ruby.svg"},
+          {name: "SASS", file:"images/tools/sass.svg"},
+          {name: "EmberJS", file:"images/tools/ember.svg"},
+          {name: "NodeJS", file:"images/tools/nodejs.svg"},
+          {name: "ExpressJS", file:"images/tools/express.svg"},
+
+          {name: "MongoDB", file:"images/tools/mongodb.svg"},
+          {name: "CouchDB", file:"images/tools/couchdb.svg"},
+          {name: "Bootstrap", file:"images/tools/bootstrap.svg"},
+          {name: "Foundation", file:"images/tools/foundation.svg"},
+          {name: "Mercurial", file:"images/tools/mercurial.svg"}
+         ]
+      },
+      {
+        name: "Toys", 
+        skills: [
+          {name: "Salt", file:"images/tools/salt.svg"},
+          {name: "Angular", file:"images/tools/angular.svg"},
+          {name: "Broccoli", file:"images/tools/broccoli.svg"},
+          {name: "Rails", file:"images/tools/rails.svg"},
+          {name: "Illustrator", file:"images/tools/illustrator.svg"},
+         ]
+      },
+   ];
+   return skill_categories;
+ }
+});
+
+==> app/controllers/skills.js <==
+import Ember from 'ember';
+
+
+export default Ember.ArrayController.extend({
+  itemController: 'skill-category',
+});
+
+==> app/controllers/skill-category.js <==
+import Ember from 'ember';
+
+export default Ember.Controller.extend({
+  // In order to fit into orderly lines
+  // each category needs to be split into groups of 5
+  grouped_skills: function(){
+    var skills = this.get('model.skills');
+    var grouped_skills = _.chunk(skills, 5);
+    return grouped_skills;
+  }.property('model'),
+});

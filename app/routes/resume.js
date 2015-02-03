@@ -1,6 +1,7 @@
 import Ember from 'ember';
+import ResetScroll from "../mixins/reset-scroll";
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(ResetScroll, {
   model: function(){
       var model = {};
       var jobs = [
@@ -34,7 +35,7 @@ export default Ember.Route.extend({
               to the schedule system. The results from this function are \
               rendered to a full display of an employees shifts, and those of \
               his or her coworkers.",
-              "image-element": '<i class="fa fa-pie-chart"></i>',
+              "image-element": '<i class="fa fa-file-code-o"></i>',
               "file": "work-samples/lasso-example.py"
             },
         },
@@ -88,14 +89,12 @@ export default Ember.Route.extend({
               {name: "Apache", file:"images/tools/apache.svg"},
           ],
           sample: {
-              "description": "HTML, CSS and JS from my most recent \
-                                    project &mdash; this website. This code \
-                                    generates the <em>Skills & Tools</em> page \
-                                    from an EmberJS backing.",
-              // maybe do "link-content" instead and specify HTML to insert
-              // inside <a> tag?
-              "image-element": '<i class="fa fa-sitemap"></i>',
-              "file": "work-samples/sudo-example.png"
+              "description": "HTML and JS from my most recent \
+                              project &mdash; this website. This code \
+                              generates the <em>Skills & Tools</em> page \
+                              from an EmberJS backing.",
+              "image-element": '<i class="fa fa-file-code-o"></i>',
+              "file": "work-samples/web-example.txt"
             },
         },
         {

@@ -25,6 +25,13 @@ app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff', {
   destDir: 'fonts'
 });
 
+minifyCSS: {
+    enabled: true
+}
+minifyJS: {
+    enabled: true
+}
+
 
 module.exports = app.toTree();
 

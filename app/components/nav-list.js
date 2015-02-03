@@ -19,10 +19,10 @@ export default Ember.Component.extend({
       title: "Skills & Tools",
       route: "skills",
     },
-    {
-      title: "Contact",
-      route: "contact",
-    },
+    // {
+    //   title: "Contact",
+    //   route: "contact",
+    // },
   ],
   actions: {
   }

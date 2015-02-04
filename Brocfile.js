@@ -25,13 +25,13 @@ app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff', {
   destDir: 'fonts'
 });
 
+// Should be enabled by default, but needs some encouragement on this project
 minifyCSS: {
     enabled: true
 }
 minifyJS: {
     enabled: true
 }
-
 
 module.exports = app.toTree();
 

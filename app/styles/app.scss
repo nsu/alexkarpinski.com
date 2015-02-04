@@ -385,12 +385,12 @@ a .contentbox {
         h5 {
             font-size: 20px;
         }
-        .tool-image {
+        .tool-image-holder {
             text-align: center;
             height: 70px;
             padding-left:15px;
-            object {
-                max-height: 120px;
+            .tool-image {
+                height: 100px;
             }
         }
         .tool-name {
@@ -478,12 +478,6 @@ rect, circle, path, polygon {
     border-left: 1px solid #656565;
     text-align:center;
     padding: 15px;
-}
-
-.vert-align {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 @import 'app/styles/resume';
